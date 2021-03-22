@@ -8,6 +8,7 @@ Install process:
 mdkir stressbot
 cd stressbot
 git clone https://github.com/KoxSosen/MineflayerBot
+npm install
 cd MineflayerBot
 ```
 

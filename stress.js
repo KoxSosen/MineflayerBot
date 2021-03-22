@@ -2,8 +2,8 @@ const mineflayer = require('mineflayer');
 const config = require("./config.json");
 
 
-if (process.argv.length < 3 || process.argv.length > config.amount) {
-    console.log('Usage : node multiple.js <host> <port>')
+if (process.argv.length < 3 || process.argv.length > 5) {
+    console.log('Usage : node stress.js <host> <port>')
     process.exit(1)
   }
 
@@ -25,7 +25,7 @@ const move2 =  () => {
 
   let i = 0
 function next () {
-  if (i < 10) {
+  if (i < config.amount) {
     i++
     setTimeout(() => {
       createBot(`stressbot-${i}`)

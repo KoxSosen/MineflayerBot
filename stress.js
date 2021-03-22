@@ -19,13 +19,14 @@ if (process.argv.length < 3 || process.argv.length > 5) {
   }
   next()
  
-  const bot = function createBot (name) {
+  function createBot (name) {
     mineflayer.createBot({
       host: process.argv[2],
       port: parseInt(process.argv[3]),
       username: name
     })
   }
+
 
 bot.once('spawn', () => {
     bot.chat(config.loginchat)
@@ -43,3 +44,4 @@ const move2 =  () => {
 
   bot.on('hello', move2)
 
+  const bot = bot

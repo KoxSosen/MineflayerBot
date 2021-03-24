@@ -2,7 +2,7 @@ const mineflayer = require('mineflayer')
 const config = require("./config.json");
 
 if (process.argv.length < 3 || process.argv.length > 5) {
-  console.log('Usage : node multiple.js <host> <port>')
+  console.log('Usage : node stress.js <host> <port>')
   process.exit(1)
 }
 
